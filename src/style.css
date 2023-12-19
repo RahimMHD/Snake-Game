@@ -1,0 +1,91 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+}
+
+
+.countainer {
+  background-image: url(./public/abstract-dark-green-futuristic-gaming-background-with-hexagon-pattern-dark-green-geometric-background-for-banner-or-offline-stream-gaming-background-template-vector.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: aliceblue;
+  padding: 10px 10px;
+  height: calc(100vh - 30px);
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+.countainer h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.countainer #scors {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.countainer .sectionGame {
+  width: 450px;
+  height: 450px;
+  margin: 0px auto;
+  border: solid 10px #027c1ee3;
+  overflow: hidden;
+  background-color: black;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.countainer .sectionGame .snake {
+  background-color: #0adc3be3;
+  display: grid;
+  grid-area: 5 /5;
+  animation: none;
+}
+@keyframes lose {
+  0%{background-color: #0adc3be3;}
+  50%{background-color: #000000;}
+  100%{background-color: #0adc3be3;}
+}
+
+.countainer .sectionGame .point {
+  display: grid;
+  grid-area: 2 / 3 ;
+  background-color: red;
+  border-radius: 100%;
+}
+.countainer .theRslt {
+  width: 300px;
+  height: 300px;
+  background-color: #027c1ee3;
+  padding: 10px;
+  border: solid 5px black;
+  border-radius: 30px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.countainer .theRslt .resultGame {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.countainer .theRslt button {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 15px 25px;
+}
